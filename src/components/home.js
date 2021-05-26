@@ -11,7 +11,7 @@ export default class Home extends Component{
             <div>
 
             <Form>
-                <p>delivery home</p>
+                <p>Delivery Home</p>
                 <Form.Group controlId="email">
                     <Form.Label>Email </Form.Label>
                     <Form.Control type="text" value={this.props.cemail} disabled="enable"/>
