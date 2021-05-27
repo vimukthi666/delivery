@@ -5,6 +5,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import './delivery.css';
 
+import Home from './home';
+
 
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
@@ -68,7 +70,7 @@ export default class DeliveryService extends Component{
             email : this.state.email,
         };
 
-        axios.post('http://localhost:4000/deliverys/delivery-service',deliveryObject)
+        axios.post('http://localhost:4000/deliverys/Adddelivery',deliveryObject)
         .then(
             transporter.sendMail({
                 to:'this.props.email',
@@ -96,13 +98,13 @@ export default class DeliveryService extends Component{
            <div className="collapse navbar-collapse" id="navbarSupportedContent">
              <ul className="navbar-nav nr-auto">
              <li className="nav-item">
-                <h2>Delivery Information</h2>
+                <h2>Delivery Information</h2>             
              </li>
              </ul>
            </div>
-          </nav><br/><br/>
+          </nav><Home /><br/><br/>
 
-
+             
              
            <section className="signup">
                <div className="container mt-5">
@@ -134,11 +136,11 @@ export default class DeliveryService extends Component{
                 </Form.Group>
                     <br/>    
 
-                <Button variant="success" size="lg" block="block" type="submit">
-                    SAVE Information
-                </Button>
+                <Button variant="success" size="lg" block="block" type="submit">SAVE Information</Button> 
 
             </Form>
+
+            
 
                    </div>
                </div>

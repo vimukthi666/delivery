@@ -9,7 +9,7 @@ let deliverySchema = require('../Models/Delivery');
 
 //Create the delivery 
 
-router.route('/delivery-service').post((req,res,next) =>{
+router.route('/Adddelivery').post((req,res,next) =>{
     deliverySchema.create(req.body, (error,data)=> {
         if(error){
             return next(error)
